@@ -2,7 +2,7 @@
 
 > 归属：fashion-studio · 作用域：**fs 全部 AI 生成/编辑产物，无例外**——款式图、效果图、大片、lookbook、面料、平铺、挂拍、细节、工艺、模特/人台、系列图等一切图片产物，以及视频/音频；不限于 Muse/模特资产。
 > 前置：建模特与标准资产包走 `ai-model-muse.md`；资产库运营走 `muse-asset-library.md`；版权合规走 `copyright-compliance.md`；素材库字段走 `asset-library-schema.md`。
-> 版本：1.3 · 许可 CC BY-NC 4.0
+> 版本：1.3 · 许可 CC BY 4.0
 
 ## 一、核心动作（工具中立，任何平台/Agent 通用）
 
