@@ -2,7 +2,7 @@
 
 > 一套面向**服装 / 服饰品牌、设计师、教师、参赛学生**的完整方法论：把"企业给了什么"一路做到"最终交付什么"——覆盖 **企业企划、生图、视频、AIGC 赛事** 四条线，并贯穿设计全流程 **21 项交付物规范**。
 
-License: **CC BY-NC 4.0**（使用须署名、禁止商用）· 版本 1.4.0 · 作者：hexiaoyu0525-design
+License: **CC BY 4.0**（使用须署名）· 版本 1.4.0 · 作者：hexiaoyu0525-design
 
 ---
 
@@ -67,7 +67,7 @@ npx skills add <你的GitHub用户名>/fashion-studio
 
 ## 可选配套：fashion-web-scraper（独立仓库）
 
-自动抓品牌官网 / 秀场参考图由**独立技能 `fashion-web-scraper`** 提供（[https://github.com/hexiaoyu0525-design/fashion-web-scraper](https://github.com/hexiaoyu0525-design/fashion-web-scraper)，同作者、同许可 CC BY-NC 4.0，**不随本仓库分发**）：
+自动抓品牌官网 / 秀场参考图由**独立技能 `fashion-web-scraper`** 提供（[https://github.com/hexiaoyu0525-design/fashion-web-scraper](https://github.com/hexiaoyu0525-design/fashion-web-scraper)，同作者、同许可 CC BY 4.0，**不随本仓库分发**）：
 
 - **需要时另行安装**：`npx skills add <你的GitHub用户名>/fashion-web-scraper`，或手动把 `fashion-web-scraper` 文件夹放进该 Agent 的 skills 目录（路径同上方"方式二"）。
 - **不装也完全可用**：本技能「怎么开工」的手动放图 / 直接发参考图通道零门槛、永远可用，全流程不受影响。
@@ -106,7 +106,7 @@ npx skills add <你的GitHub用户名>/fashion-studio
 fashion-studio/
 ├─ SKILL.md                     # 入口：任务路由、开工方式、基本原则、工具入口、总检
 ├─ README.md                    # 本文件（给人看）
-├─ LICENSE                      # CC BY-NC 4.0
+├─ LICENSE                      # CC BY 4.0
 ├─ references/                  # 29 篇方法论（Agent 按需加载）
 │  ├─ project-workflow.md       # 项目运行与协作层（模式/画布/工单/成本/交付）
 │  ├─ enterprise-proposal.md    # 企业企划
@@ -146,12 +146,12 @@ fashion-studio/
 
 ## 许可证
 
-本作品采用 **[Creative Commons 署名—非商业性使用 4.0 国际许可协议（CC BY-NC 4.0）](https://creativecommons.org/licenses/by-nc/4.0/)** 授权。
+本作品采用 **[Creative Commons 署名 4.0 国际许可协议（CC BY 4.0）](https://creativecommons.org/licenses/by/4.0/)** 授权。
 
-- 你可以共享、改编，但**必须署名原作者**（hexiaoyu0525-design，并注明作品名 fashion-studio）、**不得商用**、不得追加限制。
+- 你可以共享、改编、商用，但**必须署名原作者**（hexiaoyu0525-design，并注明作品名 fashion-studio）、不得追加限制。
 - 完整法律文本见 [`LICENSE`](LICENSE)。
 
-**使用边界**：本仓库公开，欢迎学习与借鉴方法论（设计思路、流程组织、检查清单均可参考）。但**禁止整包复制 / 改名换名后重新发布**，**禁止商用**（含以此接单、卖课、收费服务）；引用本作品内容请注明出处。
+**使用边界**：本仓库公开，欢迎学习与借鉴方法论（设计思路、流程组织、检查清单均可参考）。但不得在未署名或改名换名后作为自己作品发布；引用本作品内容请注明出处。
 
 © 2026 hexiaoyu0525-design　·　仓库：<https://github.com/hexiaoyu0525-design/fashion-studio>
 
