@@ -12,7 +12,7 @@
 |---|---|
 | **① 开工 / 素材接入** | |
 | 项目文件夹放了参考图/视频，或想从中间阶段开始（已有灵感/部分要素/已有效果图） | SKILL.md「怎么开工：素材接入 + 任意阶段进入」 |
-| 要自动抓品牌官网/秀场参考图（给品牌名或 URL，收集图片 + 设计理念文字） | **可选旁挂 skill `fashion-web-scraper`**（三通道按环境选：① 本地 Playwright 批量 / ② Agent 内置浏览器自动化零部署少量 / ③ 手动放图或直接发参考图——零门槛，人人可用） |
+| 要自动抓品牌官网/秀场参考图（给品牌名或 URL，收集图片 + 设计理念文字） | **独立技能 `fashion-web-scraper`**（https://github.com/hexiaoyu0525-design/fashion-web-scraper，另行安装；三通道按环境选：① 本地 Playwright 批量 / ② Agent 内置浏览器自动化零部署少量 / ③ 手动放图或直接发参考图——零门槛，人人可用） |
 | 怎么开工/配合/续接：工作模式（快速/协作/评审）、项目画布、审美基准板、出图前工单、成本档、项目目录、交付打包 | `references/project-workflow.md` |
 | 开工/立项要模板：项目画布空表、素材库空 CSV（字段与投喂权限列头已就绪） | `assets/project-template.md`（可复制项目画布）、`assets/asset-library-template.csv`（素材库空模板，字段见 `references/asset-library-schema.md`） |
 | 查硬数值/规格/术语/尺寸/标准号（开工前或交付前对一遍） | `references/quick-reference.md` |
