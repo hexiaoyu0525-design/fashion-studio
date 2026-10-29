@@ -107,9 +107,8 @@ fashion-studio/
 ├─ SKILL.md                     # 入口：任务路由、开工方式、基本原则、工具入口、总检
 ├─ README.md                    # 本文件（给人看）
 ├─ LICENSE                      # CC BY 4.0
-├─ references/                  # 30 篇方法论（Agent 按需加载）
+├─ references/                  # 29 篇方法论（Agent 按需加载）
 │  ├─ project-workflow.md       # 项目运行与协作层（模式/画布/工单/成本/交付）
-  ├─ router.md                 # 任务路由：Agent 按任务类型选文件
 │  ├─ enterprise-proposal.md    # 企业企划
 │  ├─ aigc-competition.md       # 赛事三条线与案例
 │  ├─ design-ideation.md        # 设计灵感、参考分寸、原创方法论
