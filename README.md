@@ -1,6 +1,12 @@
 # fashion-studio · 时尚行业 AIGC 内容生产技能
 
+![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)
+![Version](https://img.shields.io/badge/Version-1.5.0-blue)
+![Stars](https://img.shields.io/github/stars/hexiaoyu0525-design/fashion-studio)
+
 > 一套面向**服装 / 服饰品牌、设计师、教师、参赛学生**的完整方法论：把"企业给了什么"一路做到"最终交付什么"——覆盖 **企业企划、生图、视频、AIGC 赛事** 四条线，并贯穿设计全流程 **21 项交付物规范**。
+
+> 🎨 **配套技能**：[pattern-texture-skill](https://github.com/hexiaoyu0525-design/pattern-texture-skill)（纹样肌理垂直深度：构成/配色/工艺/创新转译）——两个技能可独立使用，也可协同工作。
 
 License: **CC BY 4.0**（使用须署名）· 版本 1.5.0 · 作者：hexiaoyu0525-design
 
@@ -95,6 +101,17 @@ npx skills add <你的GitHub用户名>/fashion-studio
 - 「做个新系列，4 套高定礼服」
 - 「我只有一张参考图，帮我出效果图」
 - 「继续这个项目」（会读取项目根目录的 `00_项目画布`，从断点续做）
+
+### 示例：完整走一遍
+
+**你说**：「帮我做一个宋韵新生主题的春夏女装系列，4 套 look」
+
+**Agent 输出**：
+1. 先反问你 3-5 个问题：目标受众、价格带、风格偏好（清雅/华丽/现代）、有没有参考图
+2. 给你三要素方案：廓形方向（A字/H型/收腰）、配色板（天青/月白/藕荷/泥金）、面料选择（棉麻/真丝/欧根纱）
+3. 给你 4 套 look 的设计思路：每套的主焦点、细节、配饰
+4. 给你出图提示词：每套 look 直接复制到即梦就能生成
+5. 如果你要参赛：还给你设计说明、AI 创作披露、提交清单
 
 开工可在项目文件夹放 `服装/ 模特/ 面料/ 场景/ 纹样/ 参考视频/ 灵感/` 等素材，Agent 会先做素材登记；**也可以从任意阶段中途开始**（已有灵感/部分三要素/已有效果图都能接）。
 
