@@ -1,14 +1,14 @@
 # fashion-studio · 时尚行业 AIGC 内容生产技能
 
 ![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)
-![Version](https://img.shields.io/badge/Version-1.5.0-blue)
+![Version](https://img.shields.io/badge/Version-1.6.0-blue)
 ![Stars](https://img.shields.io/github/stars/hexiaoyu0525-design/fashion-studio)
 
 > 一套面向**服装 / 服饰品牌、设计师、教师、参赛学生**的完整方法论：把"企业给了什么"一路做到"最终交付什么"——覆盖 **企业企划、生图、视频、AIGC 赛事** 四条线，并贯穿设计全流程 **21 项交付物规范**。
 
 > 🎨 **配套技能**：[pattern-texture-skill](https://github.com/hexiaoyu0525-design/pattern-texture-skill)（纹样肌理垂直深度：构成/配色/工艺/创新转译）——两个技能可独立使用，也可协同工作。
 
-License: **CC BY 4.0**（使用须署名）· 版本 1.5.0 · 作者：hexiaoyu0525-design
+License: **CC BY 4.0**（使用须署名）· 版本 1.6.0 · 作者：hexiaoyu0525-design
 
 ---
 
@@ -156,7 +156,7 @@ fashion-studio/
 │  │  ├─ fashion-illustration-spec.md  # 平面款式图/效果图/Line-up/人体比例
 │  │  ├─ ai-model-muse.md         # 固定 AI 模特（模卡资产包/复用/换装）
 │  │  ├─ muse-asset-library.md    # Muse 资产库运营（结构/索引/版本/备份）
-│  │  ├─ asset-delivery.md        # AI 资产双通道交付与归档（全部出图通用）
+│  │  ├─ asset-delivery.md        # AI 资产交付规范（对话展示＋画布自动留份，不自动保存）
 │  │  ├─ category-guide.md        # 全品类全风格（针织/牛仔/男装/童装/婚纱高定等）
 │  │  ├─ fabric-guide.md         # 识料/面料知识/渲染打光
 │  │  └─ consistency-lock.md     # 图/视频结果不对时的返工诊断与锚点锁定

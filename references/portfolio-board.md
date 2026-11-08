@@ -1,6 +1,8 @@
 # 提交与商业落地：作品集 · Line Sheet · 标识包装 · 甘特 · AI 成片（17–21）
 
-> **重要前提**：本文件所有建议都是参考，不是硬标准。没有绝对的"高级/廉价"，也没有绝对的"对/错"——先想清楚你想要的是什么风格，再判断这些规则适不适用。一切以你的需求为准。
+> **本文件包含两类内容**：
+> - **硬约束**（不可破）：AI 真人 XMP 披露（`contains-synthetic-performer`）、GB 18401/31701 强制国标与安全类别。
+> - **设计建议**（可按需调整）：页数、图文比、定价倍数与甘特周期。
 
 设计定稿后的最后一段：把作品**排成能评/能卖/能合规/能上架**的交付物。板面尺寸/字体/网格/命名统一见 `design-boards.md` 全局板面底座；工程文件（Tech Pack/BOM/3D）见 `technical-production-spec.md`；出图与出片提示词见 `image-garment.md`/`image-editorial.md`/`image-detail-fabric.md` 与 `video-brief.md`，本篇不重复。
 

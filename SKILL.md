@@ -4,7 +4,7 @@ description: 时尚行业 AIGC 内容生产技能，覆盖企业企划、生图�
 license: CC-BY-4.0
 metadata:
   author: "hexiaoyu0525-design"
-  version: "1.5.0"
+  version: "1.6.0"
   license-name: "Creative Commons Attribution 4.0 International (CC BY 4.0)"
   repository: "https://github.com/hexiaoyu0525-design/fashion-studio"
   copyright: "Copyright © 2026 hexiaoyu0525-design"
@@ -12,9 +12,11 @@ metadata:
 
 # 时尚工作室
 
-> **重要前提**：本文件所有建议都是参考，不是硬标准。没有绝对的"高级/廉价"，也没有绝对的"对/错"——先想清楚你想要的是什么风格，再判断这些规则适不适用。一切以你的需求为准。
+> **本技能包含两类内容**：
+> - **硬约束**（不可破）：版权合规底线、交付规范（对话直接展示＋画布自动留一份、不自动保存）、人体比例统一口径、AI 与生产的边界——这些是行业基本逻辑，不是风格选择。
+> - **设计建议**（可按需调整）：工作流程、风格选择、配色方法、工艺建议——这些是经验总结，可根据你的具体需求灵活调整。
 
-> **fashion-studio**　© 2026 hexiaoyu0525-design　|　版本 1.5.0　|　许可 [CC BY 4.0](LICENSE)（使用须署名）　|　仓库：https://github.com/hexiaoyu0525-design/fashion-studio
+> **fashion-studio**　© 2026 hexiaoyu0525-design　|　版本 1.6.0　|　许可 [CC BY 4.0](LICENSE)（使用须署名）　|　仓库：https://github.com/hexiaoyu0525-design/fashion-studio
 
 把服装/服饰品牌的任务，从"企业给了什么"一路做到"最终交付什么"。四类任务：**企业企划、生图、视频、赛事**，并贯穿一条版权合规底线。
 
