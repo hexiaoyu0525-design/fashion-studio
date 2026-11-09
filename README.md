@@ -1,14 +1,14 @@
 # fashion-studio · 时尚行业 AIGC 内容生产技能
 
 ![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)
-![Version](https://img.shields.io/badge/Version-1.6.0-blue)
+![Version](https://img.shields.io/badge/Version-1.6.1-blue)
 ![Stars](https://img.shields.io/github/stars/hexiaoyu0525-design/fashion-studio)
 
 > 一套面向**服装 / 服饰品牌、设计师、教师、参赛学生**的完整方法论：把"企业给了什么"一路做到"最终交付什么"——覆盖 **企业企划、生图、视频、AIGC 赛事** 四条线，并贯穿设计全流程 **21 项交付物规范**。
 
 > 🎨 **配套技能**：[pattern-texture-skill](https://github.com/hexiaoyu0525-design/pattern-texture-skill)（纹样肌理垂直深度：构成/配色/工艺/创新转译）——两个技能可独立使用，也可协同工作。
 
-License: **CC BY 4.0**（使用须署名）· 版本 1.6.0 · 作者：hexiaoyu0525-design
+License: **CC BY 4.0**（使用须署名）· 版本 1.6.1 · 作者：hexiaoyu0525-design
 
 ---
 
@@ -180,7 +180,7 @@ fashion-studio/
 
 ## 生成平台与适配
 
-- **默认**：生图用即梦 **Seedream 5.0 Pro**（大片/高定/campaign 等成品档默认 Pro；Pro 不可用时降级 5.0 Flash/标准版；文生图/图生图/多图参考），视频用即梦 **Seedance 2.5**（统一默认；2.0 仅在不支持 2.5 的环境降级；全能参考/首尾帧）。
+- **默认**：生图用即梦 **Seedream 5.5**（当前最新统一版本；大片/高定/campaign 等成品档默认 5.5；5.5 不可用时降级 5.0 Pro / 5.0 Flash；文生图/图生图/多图参考），视频用即梦 **Seedance 2.5**（统一默认；2.0 仅在不支持 2.5 的环境降级；全能参考/首尾帧）。
 - **可换**：可灵 / Runway / Pika / MiniMax H3 / Sora / Veo 等视频，或 Midjourney / Flux / Stable Diffusion / 其他出图。能力清单、术语映射、降级做法、跨 Agent 说明见 **`references/tool-adapter.md`**。
 - 各文件里标注的"参考图上限、时长、有无负向字段"等是**默认平台口径**，换平台以官方为准；设计流程、锚点、比例、国标等**方法常数不变**。
 

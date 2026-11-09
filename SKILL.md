@@ -4,7 +4,7 @@ description: 时尚行业 AIGC 内容生产技能，覆盖企业企划、生图�
 license: CC-BY-4.0
 metadata:
   author: "hexiaoyu0525-design"
-  version: "1.6.0"
+  version: "1.6.1"
   license-name: "Creative Commons Attribution 4.0 International (CC BY 4.0)"
   repository: "https://github.com/hexiaoyu0525-design/fashion-studio"
   copyright: "Copyright © 2026 hexiaoyu0525-design"
@@ -16,7 +16,7 @@ metadata:
 > - **硬约束**（不可破）：版权合规底线、交付规范（对话直接展示＋画布自动留一份、不自动保存）、人体比例统一口径、AI 与生产的边界——这些是行业基本逻辑，不是风格选择。
 > - **设计建议**（可按需调整）：工作流程、风格选择、配色方法、工艺建议——这些是经验总结，可根据你的具体需求灵活调整。
 
-> **fashion-studio**　© 2026 hexiaoyu0525-design　|　版本 1.6.0　|　许可 [CC BY 4.0](LICENSE)（使用须署名）　|　仓库：https://github.com/hexiaoyu0525-design/fashion-studio
+> **fashion-studio**　© 2026 hexiaoyu0525-design　|　版本 1.6.1　|　许可 [CC BY 4.0](LICENSE)（使用须署名）　|　仓库：https://github.com/hexiaoyu0525-design/fashion-studio
 
 把服装/服饰品牌的任务，从"企业给了什么"一路做到"最终交付什么"。四类任务：**企业企划、生图、视频、赛事**，并贯穿一条版权合规底线。
 
@@ -87,7 +87,7 @@ metadata:
 
 > 本技能的方法论**工具中立**；下列平台是**作者实测的默认实现**，不是唯一选择。换生图/视频平台、换 Agent（Codex / WorkBuddy / Claude Code 等）的能力清单、术语映射与降级做法，见 `references/tool-adapter.md`。
 
-- **生图（默认推荐）**：**Seedream 5.0 Pro**（即梦；**大片/高定/campaign 等成品档优先用 Pro**，编辑一致性更强、防漂移；Pro 不可用时降级 5.0 Flash/标准版）。
+- **生图（默认推荐）**：**Seedream 5.5**（即梦；当前最新统一版本，**大片/高定/campaign 等成品档编辑一致性强、防漂移**；5.5 不可用时降级 5.0 Pro / 5.0 Flash）。
 - **视频（默认推荐）**：即梦 **Seedance 2.5**（优先用 2.5；只有「全能参考」和「首尾帧」两个入口能命中 2.0/2.5；2.0 仅在不支持 2.5 的环境降级）。
 - 本技能**不绑定本地节点工作流、不依赖本地算力**；批量提效（批量换色/换装/换场景、批量出图）交给云平台的批量能力。
 - 我负责把料备齐、把提示词写准；**最终"生成"由你按下**。连接器没开时流程照走，只是不由我直接调用——正因如此，这套方法在任何 Agent、任何平台上都能用。
