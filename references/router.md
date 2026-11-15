@@ -1,0 +1,86 @@
+# Fashion Studio 路由表
+
+> **本文件包含两类内容**：
+> - **硬约束**（不可破）：出图统一交付规则——不手动建条目、不本地归档（交付规范见 `asset-delivery.md`）。
+> - **设计建议**（可按需调整）：任务分类方式、文件地图与使用顺序。
+
+本文件是 fashion-studio 的**完整任务分类路由**，由 SKILL.md「任务路由」一节指向。**每次任务开始，建议先按下方「任务分类路由表」判断任务类型，命中即进入对应文件，再执行具体操作。**
+
+> 文件路径约定：下列引用均相对**技能根目录**（与 SKILL.md 同级）；本文件位于 `references/` 下。
+
+## 任务分类路由表
+
+按顺序判，命中即进入对应参考文件：
+
+| 任务 | 进入 |
+|---|---|
+| **① 开工 / 素材接入** | |
+| 项目文件夹放了参考图/视频，或想从中间阶段开始（已有灵感/部分要素/已有效果图） | SKILL.md「怎么开工：素材接入 + 任意阶段进入」 |
+| 要自动抓品牌官网/秀场参考图（给品牌名或 URL，收集图片 + 设计理念文字） | **独立技能 `fashion-web-scraper`**（另行安装；三通道按环境选：① 本地 Playwright 批量 / ② Agent 内置浏览器自动化零部署少量 / ③ 手动放图或直接发参考图——零门槛，人人可用） |
+| 怎么开工/配合/续接：工作模式（快速/协作/评审）、项目画布、审美基准板、出图前工单、成本档、项目目录、交付打包 | `references/project-workflow.md` |
+| 开工/立项要模板：项目画布空表、素材库空 CSV（字段与投喂权限列头已就绪） | `assets/project-template.md`（可复制项目画布）、`assets/asset-library-template.csv`（素材库空模板，字段见 `references/asset-library-schema.md`） |
+| 查硬数值/规格/术语/尺寸/标准号（开工前或交付前对一遍） | `references/quick-reference.md` |
+| 换生图/视频平台、换 Agent（Codex / WorkBuddy / Claude Code 等）：能力清单、术语映射、降级做法 | `references/tool-adapter.md` |
+| 交付前全流程验收速查 / 阶段流转检查（21 项逐项打勾） | `references/delivery-checkpoints.md` |
+| 想要可照抄的完整流程范例（企业任务/生图/视频/高定系列/参赛、强写法↔弱写法） | `references/worked-examples.md` |
+| **② 企业 / 赛事** | |
+| 企业给了完整任务 / 要季度企划 / 要一套完整方案 | `references/enterprise-proposal.md` |
+| 参加 AIGC / 数字时装 / 服装设计比赛：选赛、读题、从零到交付 | `references/aigc-competition.md` |
+| **③ 设计与前期（含语言字典）** | |
+| 从零做设计：没想法、给了参考图/纯文字、要好看且原创、灵感转译、参考分寸 | `references/design-ideation.md` |
+| **点名品牌/设计师做参照或灵感**（"想要 Margiela 那种感觉 / 对标 XX 品牌"）→ 先翻译成锚点语言再设计 | `references/design-ideation.md` 3·7/3·8 + `references/design-language-dictionary.md` 六·5/六·6 |
+| 感性词/风格词说不清（显瘦、高级、复古、老钱、甜酷、年代、品类、面料）→ 翻译成设计变量 | `references/design-language-dictionary.md` |
+| **配色方法论深入**：三要素独立作用/五种对比强弱级数/四种调和操作步骤/八种配色法比例与踩坑/视觉修正（显瘦显高人体部位分配）/肤色冷暖和矩阵/季节场合适配/潘通 WGSN 趋势提取 | `references/color-theory.md` |
+| **款式构成决策**（选完廓形之后）：点线面在人体上的映射（点放胸口还是下摆/线走纵向还是斜向）/八大构成法则在衣服上的做法（对称·均衡·发射·渐变·重复·特异·对比·调和）/分割线方向与比例修正/印花定位/叠穿正背层次 | `references/composition-garment.md` |
+| **先锋 / 概念 / 创新设计**：要做先锋款、参赛概念系列、品牌差异化 capsule；灵感要推离常规（传统元素四步转译/跨域迁移/解构重组/概念驱动）；创新结构选型（解构语言/不对称/立裁vs平面/模块化）；立体造型手法速查（褶皱·缠绕·垂坠·膨胀·折叠…12 种 × 视觉×难度×风格）；面料再造**设计决策**（该不该动/材质对比怎么拼/非常规材料叙事）；系列从 1 个 idea 展开到 8–12 套 | `references/innovation-methods.md` |
+| **效果图阶段整体整合（核心痛点）**：把色彩/面料/廓形/细节拼到一件衣服上时总调不好——要查整体造型美学法则（视觉重心/上下身量感平衡/疏密呼吸/视觉动线/正负形）、完成度判断（太简单→怎么加法、太复杂→怎么减法，两张速查清单）、平面草图→穿上身效果预判、6–8 套 look 整体和谐标准、"高级感/先锋感/松弛感/清冷感/贵气感"→整件衣服长什么样 | `references/garment-transformation.md` |
+| **学大牌怎么把概念变成衣**：15 家深度拆解（Margiela/山本耀司/川久保玲/Rick Owens/Ann Demeulemeester + The Row/Celine/Lemaire/McQueen/Valentino/Prada/Chanel/Gucci/Off-White/三宅一生）——每家的概念→廓形→细节→面料→色彩转化链、先抓什么后抓什么、做到哪几步算到位（不是形似） | `references/brand-design-languages.md` |
+| **对标顶尖院校的设计流程**：设计卡住不知道下一步做什么、想按专业标准评判自己的系列——CSM（概念先行）/帕森斯（research 驱动）/LCF（技术落地）/皇艺（纯艺术）/安特卫普（实验工坊制）的教学步骤与评价标尺 | `references/school-design-methods.md` |
+| **效果图出图效果不理想**：出来的图太平/太乱/头重脚轻/各要素打架/质感不对/"说不出哪里不对但就是不好看"——症状→可能原因→调整方向速查，含出图前 60 秒自检清单 | `references/illustration-diagnosis.md` |
+| 你完全不懂服装术语（说不出面料/廓形/工艺叫什么），只会说感受、打比方或给图 | `references/design-language-dictionary.md` 第七节「人话⇄术语对照」+ `references/project-workflow.md`「零术语适配·新手模式」+ `assets/prompt-samples.md`（已翻好术语的完整提示词模板，只改 2–3 处占位） |
+| 前期企划板·**调研与灵感**（01 调研含自主趋势研判四步、02 灵感/情绪板、02-附 主题板/概念板） | `references/design-boards-research.md`（全局板面底座先读 `references/design-boards.md`） |
+| 前期企划板·**服装三要素与纹样工艺**（03 色彩、04 面料含辅料、05 纹样/印花/工艺花型含刺绣专项与企业生产工艺方案、06 廓形趋势） | `references/design-boards-elements.md`（全局板面底座先读 `references/design-boards.md`） |
+| 配饰造型板（10）：可以在前期企划阶段定方向，也可以在款式图之后、摄影大片之前做完整搭配方案，选做环节 | `references/design-boards-accessory.md`（全局板面底座先读 `references/design-boards.md`） |
+| 全局板面底座（尺寸/字体/网格/命名/拼贴公共形式美/三条产出路径/版权底线）+ 先懂前期（服装三要素与真实创作顺序）+ 板块间一致性核对 | `references/design-boards.md`（入口索引，所有板共用） |
+| 面料再造 / 材料实验 / AI 创意面料·虚拟材质 / 可持续·未来材料（"造料"，不是选料） | `references/material-lab.md` |
+| **④ 出图（含返工）** | |
+| **出图统一交付规则（fs 全部 AI 生图/编辑产物通用）：每张出图只做"对话直接展示 + 画布自动留一份"，不手动建条目、不本地归档，用户自行保存** | `references/asset-delivery.md` |
+| 出任何服装/系列图：四步管线、验收门、走哪条路径、人体比例统一口径（**生图总入口**） | `references/image-quality-sop.md` |
+| 设计表达：平面款式图/时装效果图/系列 Line-up/细节图、时装人体比例（07–09、11） | `references/fashion-illustration-spec.md` |
+| 只要图 · 服装本体（无模特）：款式、平铺、挂拍、人台、幽灵模特、技术款式图 | `references/image-garment.md` |
+| 只要图 · 模特穿上：lookbook、服装大片、上身、系列图 | `references/image-editorial.md` |
+| 建立/复用一个固定 AI 模特（专属模特，跨图/跨系列锁同一人；含真人照片/参考图建模的起点三问、比例口径与身形分离法） | `references/ai-model-muse.md` |
+| Muse 资产库运营：整库结构/身份卡与索引一致性/版本迭代/头身比实测/云盘备份与增量同步 | `references/muse-asset-library.md` |
+| 出图对品类没把握（针织/牛仔/男装/童装/内衣泳装/羽绒/婚纱高定/皮革等）查品类结构·工艺·常见问题 | `references/category-guide.md` |
+| 查某面料是什么、怎么渲染/打光/写动态（面料全品类知识） | `references/fabric-guide.md` |
+| 只要图 · 局部特写：细节、工艺、面料、辅料、微距 | `references/image-detail-fabric.md` |
+| 图或视频结果不对、要返工 | `references/consistency-lock.md` |
+| **⑤ 工程 / 提交** | |
+| 版型工程：白坯/立裁/纸样/工艺单 Tech Pack/BOM 尺寸推档/3D 虚拟成衣（12–16） | `references/technical-production-spec.md` |
+| 提交落地：作品集展板/Line Sheet/吊牌洗唛/甘特/AI 成片衔接、赛事提交速查（17–21） | `references/portfolio-board.md` |
+| **⑥ 视频** | |
+| 只要视频 · 先定影片类型 | `references/video-film-types.md` |
+| 已定类型 · 写投喂 Seedance 的四段式备料包；**导演流水线**（定类型→五问定片→视觉系统分层→风格档/导演声音→镜头表→四段式→生成锚点→声音后期→验收）；文生/图生视频生成前的导演逻辑（五问定片、出现形态、锚点链）；有参考时尚片想对标重做 | `references/video-brief.md` |
+| 参考片是短视频爆款/带货玩法，要复刻换人换产品（口播/盘点/街采/播客等） | 可选协作 `video-remix-studio`（爆款复刻六阶段导演流水线，README「可选配套」有安装与分工说明）；时尚美学/人物比例仍以本技能为准 |
+| **⑦ 文字 / 合规 / 库** | |
+| 要写文字：品牌故事、主题概念、三级随件说明、汇报发言稿、营销文案、designer statement、AI 创作说明 | `references/text-content.md` |
+| 版权合规：AI 素材来源、可商用判定、风险评级、原创证明、版权自查报告 | `references/copyright-compliance.md` |
+| 建/用 AIGC 素材库：模特、服装、面料、姿态、动态、文化参考的分类、投喂权限与字段规范 | `references/asset-library-schema.md` |
+
+## 全流程怎么走
+
+**全流程怎么走（编号 ≠ 创作先后）**：调研→灵感→服装三要素（款式·廓形/色彩/面料并行）→纹样/工艺花型→**效果图（先）定款→款式图（后）**→配饰（选做）→摄影大片/细节特写→工程（要生产时）→提交。做设计先走 `references/design-ideation.md`（把设计做出来），前期板先走 `references/design-boards.md`（全局底座与三要素顺序）再按板组进入 `design-boards-research.md`（01/02）、`design-boards-elements.md`（03/04/05/06）、`design-boards-accessory.md`（10），设计图走 `references/fashion-illustration-spec.md`，**定稿后出商品图全程受 `references/image-quality-sop.md` 四步管线调度**，大片走 `references/image-editorial.md`，要生产走 `references/technical-production-spec.md`，提交/商业走 `references/portfolio-board.md`；企业语境归 `references/enterprise-proposal.md`，赛事语境归 `references/aigc-competition.md`，文字归 `references/text-content.md`，版权归 `references/copyright-compliance.md`。
+
+## 混合任务
+
+**混合任务**（企划里既有图又有片）：先走 `references/enterprise-proposal.md` 定总方案与交付物矩阵，再分别进入图/视频模块。
+
+## 文件地图（references/ 下全部 .md + assets 模板，按域分组；"什么任务进哪个文件"以上方路由表为准）
+
+- **开工 / 协作**：`references/project-workflow.md`（三模式·画布·交付打包）、`references/tool-adapter.md`（换平台 / Agent）、`references/quick-reference.md`（硬数值速查卡）、`references/delivery-checkpoints.md`（全流程验收速查卡）、`references/worked-examples.md`（全流程范例）
+- **企业 / 赛事**：`references/enterprise-proposal.md`（三企划·趋势节奏·波段·封样·评审）、`references/aigc-competition.md`（三层分类·读题·获奖案例·交付）
+- **设计与前期**：`references/design-ideation.md`（从零做设计·分寸尺·白模自举）、`references/design-language-dictionary.md`（感性词→设计变量 + 人话⇄术语对照）、`references/board-dictionaries.md`（各板附字典：色彩方向/辅料知识/纹样母题/廓形选型/配饰知识）、`references/color-theory.md`（色彩构成系统工具箱：三要素/五种对比/四种调和/八种配色法/视觉修正·肤色·季节场合/潘通 WGSN 提取）、`references/composition-garment.md`（服装款式构成工具箱：点线面人体映射/八大法则服装做法/分割线比例修正/印花定位/叠穿层次/决策流程）、`references/innovation-methods.md`（创新设计方法工具箱：思维转化四法/创新结构/立体造型手法库/面料再造决策/系列化展开/总决策流程）、`references/garment-transformation.md`（**成衣转化工具箱**：效果图阶段整体整合——视觉重心/量感平衡/疏密呼吸/完成度加减法/平面→立体预判/感性词→整体视觉特征）、`references/brand-design-languages.md`（**大牌设计语言方法论**：15 家概念→成衣转化链+完成度参考标准）、`references/school-design-methods.md`（**五所顶尖院校方法论**：CSM/帕森斯/LCF/皇艺/安特卫普教学流程与评价标尺）、`references/illustration-diagnosis.md`（**效果图问题诊断**：症状→可能原因→调整方向+60 秒自检）、`references/design-boards.md`（**入口索引 + 全局板面底座 + 先懂前期 + 板块间一致性**）、`references/design-boards-research.md`（01 调研 · 02 灵感/主题）、`references/design-boards-elements.md`（03 色彩 · 04 面料 · 05 纹样工艺 · 06 廓形）、`references/design-boards-accessory.md`（10 配饰）、`references/material-lab.md`（造料：面料再造 / AI 创意面料 / 可持续）、`assets/prompt-samples.md`（示例锚点包：已翻好术语的完整提示词模板）
+- **出图**：`references/image-quality-sop.md`（总调度·四步管线）、`references/image-garment.md`（无模特服装图）、`references/image-editorial.md`（大片 / lookbook）、`references/image-detail-fabric.md`（细节微距）、`references/fashion-illustration-spec.md`（07–09、11 图与人体比例）、`references/ai-model-muse.md`（固定 AI 模特）、`references/muse-asset-library.md`（Muse 资产库运营：归档/版本/索引/云盘）、`references/asset-delivery.md`（AI 资产交付：对话展示＋画布自动留份、不自动保存）、`references/category-guide.md`（全品类全风格）、`references/fabric-guide.md`（识料 / 面料知识）、`references/consistency-lock.md`（返工诊断）
+- **工程 / 提交**：`references/technical-production-spec.md`（12–16 白坯到 3D）、`references/portfolio-board.md`（17–21 作品集到 AI 成片）
+- **视频**：`references/video-film-types.md`（九种影片类型）、`references/video-brief.md`（导演流水线·四段式·对标拆解·声音与包装）
+- **文字 / 合规 / 库**：`references/text-content.md`（随件说明与文案）、`references/copyright-compliance.md`（版权底线与自查报告）、`references/asset-library-schema.md`（素材库蓝图·**四级投喂权限唯一定义**）
