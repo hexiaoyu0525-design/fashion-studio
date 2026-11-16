@@ -65,7 +65,7 @@ License: **CC BY 4.0**（使用须署名）· 版本 1.6.2 · 作者：hexiaoyu0
 在支持 skills 的 Agent 环境中：
 
 ```bash
-npx skills add <你的GitHub用户名>/fashion-studio
+npx skills add hexiaoyu0525-design/fashion-studio
 ```
 
 ### 方式二：手动安装
@@ -88,7 +88,7 @@ npx skills add <你的GitHub用户名>/fashion-studio
 
 自动抓品牌官网 / 秀场参考图由**独立技能 `fashion-web-scraper`** 提供（同作者、同许可 CC BY 4.0，**不随本仓库分发**）：
 
-- **需要时另行安装**：`npx skills add <你的GitHub用户名>/fashion-web-scraper`，或手动把 `fashion-web-scraper` 文件夹放进该 Agent 的 skills 目录（路径同上方"方式二"）。
+- **需要时另行安装**：`npx skills add hexiaoyu0525-design/fashion-web-scraper`，或手动把 `fashion-web-scraper` 文件夹放进该 Agent 的 skills 目录（路径同上方"方式二"）。
 - **不装也完全可用**：本技能「怎么开工」的手动放图 / 直接发参考图通道零门槛、永远可用，全流程不受影响。
 - 采集素材的落盘、命名、版权分级口径与本技能一致（见 scraper 内「落盘规范」）。
 
@@ -98,7 +98,7 @@ npx skills add <你的GitHub用户名>/fashion-studio
 
 纹样 / 面料肌理的**深度设计**由**独立技能 `pattern-texture-skill`**（简称 **PTS**）提供（同作者、同许可 CC BY 4.0，**不随本仓库分发**）：纹样构成、配色构成、风格标签库四册、工艺适配、立体肌理、传统元素现代转译、应用部位、出图提示词模板、版权合规、自检诊断。
 
-- **安装**（做纹样/肌理深度设计时装）：`npx skills add <你的GitHub用户名>/pattern-texture-skill`，或手动把 `pattern-texture-skill` 文件夹放进该 Agent 的 skills 目录（路径同上方"方式二"）。
+- **安装**（做纹样/肌理深度设计时装）：`npx skills add hexiaoyu0525-design/pattern-texture-skill`，或手动把 `pattern-texture-skill` 文件夹放进该 Agent 的 skills 目录（路径同上方"方式二"）。
 - **不装也完全可用**：本技能内的纹样占位设计（`references/design-boards-elements.md` 05 板）独立成立，日常出图不受影响；装 PTS 后才进入构成/骨式/风格标签级的专业深度。
 - **两种联动模式**：**FS 先行**——本技能的色彩板/面料板做好后，PTS 在此基础上深化纹样；**PTS 先行**——PTS 输出的配色与肌理方案若更好，可反向更新本技能的色彩板/面料板。设计是迭代的，不是单向约束。
 - **分工边界**：本技能管"服装全流程中的纹样环节"（板面、出图、交付）；PTS 管"纹样本体"（构成/配色/工艺/肌理/转译）。同一个纹样任务两边都会用到时，先按 PTS 出专业方案，再回本技能进入出图与交付流程。
@@ -109,7 +109,7 @@ npx skills add <你的GitHub用户名>/fashion-studio
 
 `fashion-studio` 负责**时尚美学、人物比例与服装大片/时装电影**的方法论——视频环节自带一条完整导演流水线（定类型→五问定片→视觉系统分层→风格档/导演声音→镜头表→四段式备料→生成与锚点→声音后期→验收，见 `references/video-brief.md`「导演流水线总览」）；当任务变成"拿一条爆款参考视频做**克隆 / 复刻 / 翻拍 / 改编**成自己的版本（口播、盘点排行、短剧、街头采访、双人播客、讲解演示、旁白带货等），换人、换脸、换产品、换品牌、换行业、换语言、换场景"，由**可选协作 skill `video-remix-studio`** 承接：它是一条六阶段导演流水线（立项 → 拆参考 → 改编导演案 → 脚本与时间 → 素材生产 → 合成与审片），方法论与生成平台解耦，素材生成与合成按当前环境适配层执行（豆包环境 = 即梦 Seedream/Seedance + 语音合成 + mediakit/剪映，其他 Agent / 平台可换适配层复用）。
 
-- **安装**（需要复刻爆款视频时）：与 `fashion-studio` 同目录安装即可（`npx skills add <你的GitHub用户名>/video-remix-studio`，或手动把 `video-remix-studio` 文件夹放进该 Agent 的 skills 目录，路径同上方"方式二"）。
+- **安装**（需要复刻爆款视频时）：与 `fashion-studio` 同目录安装即可（`npx skills add hexiaoyu0525-design/video-remix-studio`，或手动把 `video-remix-studio` 文件夹放进该 Agent 的 skills 目录，路径同上方"方式二"）。
 - **不装也完全可用**：不涉及爆款复刻时无需安装；本技能核心流程零依赖照常运转。
 - **分工边界**：本技能的视频环节只覆盖**用户自建 / 原创**的时装片（导演流水线见 `references/video-brief.md`）；`video-remix-studio` 只覆盖**复刻 / 改编他人爆款视频**。两者是独立方法论，任务归属哪边就走哪边，不混合、不互相承接。
 - **合规提醒**：含**真人脸**的参考视频做"换脸 / 克隆真人主持"，多数视频模型在网关侧会拒绝且有合规风险；默认改用 AI 数字人 / 自建模特，或仅在持有明确授权时尝试并如实报告失败。AI 自建模特（非真人）不受此限，且仍按本技能的 Muse 流程锁人。
