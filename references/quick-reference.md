@@ -4,6 +4,27 @@
 
 开工前/交付前查这张卡；数值有多种口径时，各文件里并列的口径按项目选定并**显式声明**，不伪装唯一。
 
+## 目录
+
+- 板面 · 印刷 · 屏幕（来源 `design-boards.md`）
+- 字体（印刷 pt，全案 ≤1–2 字族）
+- 趋势与企划节奏（`enterprise-proposal.md` / `design-boards.md` 01-附）
+- 色号 · 配色（`design-boards.md` 03）
+- 印花 · 分色 · 刺绣（`design-boards.md` 05，CY/T 249—2021）
+- 材料实验（`material-lab.md`，"造料"非选料）
+- 款式图线宽（`fashion-illustration-spec.md` 07）
+- 人体两套（建议不要混用，`image-quality-sop.md` 五）
+- 白坯 · 纸样（`technical-production-spec.md` 12/13）
+- Tech Pack · 公差 · 针距（`technical-production-spec.md` 14/15）
+- 号型 · 推档（`technical-production-spec.md` 15，GB/T 1335）
+- 3D 虚拟成衣（`technical-production-spec.md` 16）
+- 视频（`video-brief.md` / `portfolio-board.md` 21）
+- 电商/成片（`portfolio-board.md` 21）
+- 强制/推荐标准（落地前查现行有效版，`portfolio-board.md` 19）
+- 素材投喂权限（`asset-library-schema.md`）
+- 四步管线（`image-quality-sop.md`，推荐顺序，可按项目调整）
+- 21 项交付物 → 规范文件
+
 ## 板面 · 印刷 · 屏幕（来源 `design-boards.md`）
 
 | 版面 | 净尺寸 mm | @300dpi 净像素(竖) | 含3mm出血 |
@@ -62,14 +83,14 @@
 
 | | 写实摄影（真人大片） | 时装画（效果图/Line-up） |
 |---|---|---|
-| 头身 | **1:9**（无母版直出写实/照片向统一值）；有 Muse 继承母版 | **9–10**（插画/时装画档） |
+| 头身 | **1:9**（无母版直出写实/照片向统一值）；有 Muse 身份继承、比例目标 1:9＋头部适当缩小（纪实/素人继承母版） | **9–10**（插画/时装画档） |
 | 裆/身高 | **55%** | 拉长（插画档） |
 | 大腿:小腿 | 接近 | 小腿略长 |
 | 用途 | 步骤③/电商/Lookbook | 08/09/11 |
 
 - 9 头身关键落位：肩 1.5、腰 3.0、臀 4.0、裆 4.25、指尖 5.0、膝 6.0、踝 8.0–8.5、脚底 9.0；男裆 4.5、膝 6.5。
 - 童装：0–1 岁约 4 头 → 6–12 岁 5.5–6.5 → 16–17 岁约 7.5。
-- **执行口径**：无母版直出写实/照片向统一写 1:9 + 裆 55%；有 Muse 继承母版不写数字；插画档 9–10 头禁用于写实片（完整口径见 `image-quality-sop.md` 五）。
+- **执行口径**：无母版直出写实/照片向统一写 1:9 + 裆 55%；有 Muse 身份继承、比例目标 1:9＋头部适当缩小（纪实/素人继承母版）；插画档 9–10 头禁用于写实片（完整口径见 `image-quality-sop.md` 五）。
 
 ## 白坯 · 纸样（`technical-production-spec.md` 12/13）
 
@@ -129,8 +150,9 @@
 
 ## 21 项交付物 → 规范文件
 
-| 01–06、10 板 | `design-boards.md` |
+| 交付物 | 规范文件 |
 |---|---|
+| 01–06、10 板 | `design-boards.md` |
 | 07 款式图 / 08 效果图 / 09 系列 / 11 细节 | `fashion-illustration-spec.md` |
 | 12 白坯 / 13 纸样 / 14 Tech Pack / 15 BOM推档 / 16 3D | `technical-production-spec.md` |
 | 17 作品集 / 18 Line Sheet / 19 吊牌洗唛 / 20 甘特 / 21 成片 | `portfolio-board.md` |

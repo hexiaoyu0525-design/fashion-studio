@@ -1,16 +1,29 @@
 # fashion-studio · 时尚行业 AIGC 内容生产技能
 
 ![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)
-![Version](https://img.shields.io/badge/Version-1.6.1-blue)
-![Stars](https://img.shields.io/github/stars/hexiaoyu0525-design/fashion-studio)
+![Version](https://img.shields.io/badge/Version-1.6.2-blue)
 
 > 一套面向**服装 / 服饰品牌、设计师、教师、参赛学生**的完整方法论：把"企业给了什么"一路做到"最终交付什么"——覆盖 **企业企划、生图、视频、AIGC 赛事** 四条线，并贯穿设计全流程 **21 项交付物规范**。
 
-> 🎨 **配套技能**：[pattern-texture-skill](https://github.com/hexiaoyu0525-design/pattern-texture-skill)（纹样肌理垂直深度：构成/配色/工艺/创新转译）——两个技能可独立使用，也可协同工作。
+> 🎨 **配套技能**：`pattern-texture-skill`（纹样肌理垂直深度：构成/配色/工艺/创新转译）——两个技能可独立使用，也可协同工作。
 
-License: **CC BY 4.0**（使用须署名）· 版本 1.6.1 · 作者：hexiaoyu0525-design
+License: **CC BY 4.0**（使用须署名）· 版本 1.6.2 · 作者：hexiaoyu0525-design
 
 ---
+
+## 目录
+
+- 这是什么
+- 明确不做什么（边界）
+- 安装
+- 可选配套：fashion-web-scraper（独立仓库）
+- 可选配套：pattern-texture-skill（纹样肌理垂直深度，独立仓库）
+- 可选配套：video-remix-studio（爆款视频复刻 / 改编）
+- 快速开始
+- 目录结构
+- 生成平台与适配
+- 素材库
+- 许可证
 
 ## 这是什么
 
@@ -41,7 +54,7 @@ License: **CC BY 4.0**（使用须署名）· 版本 1.6.1 · 作者：hexiaoyu0
 - **不做本地节点工作流（如 ComfyUI）**：面向即梦等线上云模型，批量提效交云平台。
 - **不生成 3D 工程文件**：可编辑的 `.zprj/.clo3d/.sproj/.fbx/.glb` 必须用 Style3D / CLO / Marvelous Designer 等专业软件；本技能负责交给 3D 前的全部图与视频，并**出超真实 3D 渲染图可交付看效果**（提案/赛事/数字走秀）。
 - **不冒充生产文件**：纸样、Tech Pack、BOM、精确珠绣制版（.DST）必须由专业软件/人工完成，AI 图不冒充；AI 出**超真实展示图**（含款式图约束直出、工艺单插图、材料创意展示）可直接交付提案，生产数据与合规判定仍走人工/专业路径。
-- **不做虚拟试穿（把任意衣服临时穿到模特身上）/数字人主播/直播带货**：Muse 解决"固定同一人"，**换装/改款属已固定 Muse 的全套重出**（`ai-model-muse.md` 五·5），不临时试穿、不口播。
+- **不做虚拟试穿（把任意衣服临时穿到模特身上）/数字人主播/直播带货**：Muse 解决"固定同一人"，**换装/改款属已固定 Muse 的全套重出**（`references/ai-model-muse.md` 五·5），不临时试穿、不口播。
 
 ---
 
@@ -52,7 +65,7 @@ License: **CC BY 4.0**（使用须署名）· 版本 1.6.1 · 作者：hexiaoyu0
 在支持 skills 的 Agent 环境中：
 
 ```bash
-npx skills add <你的GitHub用户名>/fashion-studio
+npx skills add hexiaoyu0525-design/fashion-studio
 ```
 
 ### 方式二：手动安装
@@ -73,21 +86,32 @@ npx skills add <你的GitHub用户名>/fashion-studio
 
 ## 可选配套：fashion-web-scraper（独立仓库）
 
-自动抓品牌官网 / 秀场参考图由**独立技能 `fashion-web-scraper`** 提供（[https://github.com/hexiaoyu0525-design/fashion-web-scraper](https://github.com/hexiaoyu0525-design/fashion-web-scraper)，同作者、同许可 CC BY 4.0，**不随本仓库分发**）：
+自动抓品牌官网 / 秀场参考图由**独立技能 `fashion-web-scraper`** 提供（同作者、同许可 CC BY 4.0，**不随本仓库分发**）：
 
-- **需要时另行安装**：`npx skills add <你的GitHub用户名>/fashion-web-scraper`，或手动把 `fashion-web-scraper` 文件夹放进该 Agent 的 skills 目录（路径同上方"方式二"）。
+- **需要时另行安装**：`npx skills add hexiaoyu0525-design/fashion-web-scraper`，或手动把 `fashion-web-scraper` 文件夹放进该 Agent 的 skills 目录（路径同上方"方式二"）。
 - **不装也完全可用**：本技能「怎么开工」的手动放图 / 直接发参考图通道零门槛、永远可用，全流程不受影响。
 - 采集素材的落盘、命名、版权分级口径与本技能一致（见 scraper 内「落盘规范」）。
 
 ---
 
+## 可选配套：pattern-texture-skill（纹样肌理垂直深度，独立仓库）
+
+纹样 / 面料肌理的**深度设计**由**独立技能 `pattern-texture-skill`**（简称 **PTS**）提供（同作者、同许可 CC BY 4.0，**不随本仓库分发**）：纹样构成、配色构成、风格标签库四册、工艺适配、立体肌理、传统元素现代转译、应用部位、出图提示词模板、版权合规、自检诊断。
+
+- **安装**（做纹样/肌理深度设计时装）：`npx skills add hexiaoyu0525-design/pattern-texture-skill`，或手动把 `pattern-texture-skill` 文件夹放进该 Agent 的 skills 目录（路径同上方"方式二"）。
+- **不装也完全可用**：本技能内的纹样占位设计（`references/design-boards-elements.md` 05 板）独立成立，日常出图不受影响；装 PTS 后才进入构成/骨式/风格标签级的专业深度。
+- **两种联动模式**：**FS 先行**——本技能的色彩板/面料板做好后，PTS 在此基础上深化纹样；**PTS 先行**——PTS 输出的配色与肌理方案若更好，可反向更新本技能的色彩板/面料板。设计是迭代的，不是单向约束。
+- **分工边界**：本技能管"服装全流程中的纹样环节"（板面、出图、交付）；PTS 管"纹样本体"（构成/配色/工艺/肌理/转译）。同一个纹样任务两边都会用到时，先按 PTS 出专业方案，再回本技能进入出图与交付流程。
+
+---
+
 ## 可选配套：video-remix-studio（爆款视频复刻 / 改编）
 
-`fashion-studio` 负责**时尚美学、人物比例与服装大片/时装电影**的方法论——视频环节自带一条完整导演流水线（定类型→五问定片→视觉系统分层→风格档/导演声音→镜头表→四段式备料→生成与锚点→声音后期→验收，见 `video-brief.md`「导演流水线总览」）；当任务变成"拿一条爆款参考视频做**克隆 / 复刻 / 翻拍 / 改编**成自己的版本（口播、盘点排行、短剧、街头采访、双人播客、讲解演示、旁白带货等），换人、换脸、换产品、换品牌、换行业、换语言、换场景"，由**可选协作 skill `video-remix-studio`** 承接：它是一条六阶段导演流水线（立项 → 拆参考 → 改编导演案 → 脚本与时间 → 素材生产 → 合成与审片），方法论与生成平台解耦，素材生成与合成按当前环境适配层执行（豆包环境 = 即梦 Seedream/Seedance + 语音合成 + mediakit/剪映，其他 Agent / 平台可换适配层复用）。
+`fashion-studio` 负责**时尚美学、人物比例与服装大片/时装电影**的方法论——视频环节自带一条完整导演流水线（定类型→五问定片→视觉系统分层→风格档/导演声音→镜头表→四段式备料→生成与锚点→声音后期→验收，见 `references/video-brief.md`「导演流水线总览」）；当任务变成"拿一条爆款参考视频做**克隆 / 复刻 / 翻拍 / 改编**成自己的版本（口播、盘点排行、短剧、街头采访、双人播客、讲解演示、旁白带货等），换人、换脸、换产品、换品牌、换行业、换语言、换场景"，由**可选协作 skill `video-remix-studio`** 承接：它是一条六阶段导演流水线（立项 → 拆参考 → 改编导演案 → 脚本与时间 → 素材生产 → 合成与审片），方法论与生成平台解耦，素材生成与合成按当前环境适配层执行（豆包环境 = 即梦 Seedream/Seedance + 语音合成 + mediakit/剪映，其他 Agent / 平台可换适配层复用）。
 
-- **安装**（需要复刻爆款视频时）：与 `fashion-studio` 同目录安装即可（`npx skills add <你的GitHub用户名>/video-remix-studio`，或手动把 `video-remix-studio` 文件夹放进该 Agent 的 skills 目录，路径同上方"方式二"）。
+- **安装**（需要复刻爆款视频时）：与 `fashion-studio` 同目录安装即可（`npx skills add hexiaoyu0525-design/video-remix-studio`，或手动把 `video-remix-studio` 文件夹放进该 Agent 的 skills 目录，路径同上方"方式二"）。
 - **不装也完全可用**：不涉及爆款复刻时无需安装；本技能核心流程零依赖照常运转。
-- **分工边界**：本技能的视频环节只覆盖**用户自建 / 原创**的时装片（导演流水线见 `video-brief.md`）；`video-remix-studio` 只覆盖**复刻 / 改编他人爆款视频**。两者是独立方法论，任务归属哪边就走哪边，不混合、不互相承接。
+- **分工边界**：本技能的视频环节只覆盖**用户自建 / 原创**的时装片（导演流水线见 `references/video-brief.md`）；`video-remix-studio` 只覆盖**复刻 / 改编他人爆款视频**。两者是独立方法论，任务归属哪边就走哪边，不混合、不互相承接。
 - **合规提醒**：含**真人脸**的参考视频做"换脸 / 克隆真人主持"，多数视频模型在网关侧会拒绝且有合规风险；默认改用 AI 数字人 / 自建模特，或仅在持有明确授权时尝试并如实报告失败。AI 自建模特（非真人）不受此限，且仍按本技能的 Muse 流程锁人。
 
 ---
@@ -146,7 +170,10 @@ fashion-studio/
 │  │  ├─ brand-design-languages.md   # 15 家大牌概念→成衣转化链
 │  │  ├─ school-design-methods.md  # CSM/帕森斯/LCF/皇艺/安特卫普教学流程
 │  │  ├─ illustration-diagnosis.md  # 效果图问题诊断（症状→原因→调整方向）
-│  │  ├─ design-boards.md         # 前期板制作方法（01 调研/02 灵感/03 色彩/04 面料/05 纹样工艺/06 廓形/10 配饰）
+│  │  ├─ design-boards.md         # 前期板入口索引 + 全局板面底座（尺寸/字体/网格/命名/版权底线）
+│  │  ├─ design-boards-research.md   # 01 调研 · 02 灵感/主题板
+│  │  ├─ design-boards-elements.md   # 03 色彩 · 04 面料 · 05 纹样工艺 · 06 廓形板
+│  │  ├─ design-boards-accessory.md  # 10 配饰造型板
 │  │  └─ material-lab.md          # 面料再造/材料实验/AI 创意面料/可持续材料
 │  ├─ 【出图】
 │  │  ├─ image-quality-sop.md     # 生图总调度：四步管线/验收门/人体比例
@@ -199,6 +226,6 @@ fashion-studio/
 
 **使用边界**：本仓库公开，欢迎学习与借鉴方法论（设计思路、流程组织、检查清单均可参考）。但不得在未署名或改名换名后作为自己作品发布；引用本作品内容请注明出处。
 
-© 2026 hexiaoyu0525-design　·　仓库：<https://github.com/hexiaoyu0525-design/fashion-studio>
+© 2026 hexiaoyu0525-design
 
 > 免责声明：本作品为方法论与提示词模板，以"现状"提供；涉及品牌名仅用于行业示例，不构成侵权指引；商用请遵循各生成平台条款与所在国法规。

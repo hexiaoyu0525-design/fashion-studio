@@ -1,12 +1,11 @@
 ---
 name: fashion-studio
-description: 时尚行业 AIGC 内容生产技能，覆盖企业企划、生图、视频、赛事四线全流程：从"企业给了什么"一路做到"最终交付什么"，贯穿 21 项交付物规范与版权合规。提及服装企划、出图、出片、参赛，或"灵感板/色彩板/面料板/款式图/效果图/廓形/工艺/纹样/图案/lookbook/大片/宣发视频"时使用；即使未点名本技能，只要在聊服装设计、出图、出片、参赛相关任务，都应使用本技能；结果不对时用于定位改哪句。
+description: 时尚行业 AIGC 内容生产：企业企划、生图、视频、赛事四线全流程，从需求到交付物，含交付物规范与版权合规。用户提到服装企划、出图、出片、参赛，或聊服装设计、灵感板、色彩板、面料板、款式图、效果图、廓形、工艺、纹样、图案、lookbook、大片、宣发视频时使用；不必点名本技能。纹样走 `pattern-texture-skill`，爆款复刻走 `video-remix-studio`。
 license: CC-BY-4.0
 metadata:
   author: "hexiaoyu0525-design"
-  version: "1.6.1"
+  version: "1.6.2"
   license-name: "Creative Commons Attribution 4.0 International (CC BY 4.0)"
-  repository: "https://github.com/hexiaoyu0525-design/fashion-studio"
   copyright: "Copyright © 2026 hexiaoyu0525-design"
 ---
 
@@ -16,7 +15,7 @@ metadata:
 > - **硬约束**（不可破）：版权合规底线、交付规范（对话直接展示＋画布自动留一份、不自动保存）、人体比例统一口径、AI 与生产的边界——这些是行业基本逻辑，不是风格选择。
 > - **设计建议**（可按需调整）：工作流程、风格选择、配色方法、工艺建议——这些是经验总结，可根据你的具体需求灵活调整。
 
-> **fashion-studio**　© 2026 hexiaoyu0525-design　|　版本 1.6.1　|　许可 [CC BY 4.0](LICENSE)（使用须署名）　|　仓库：https://github.com/hexiaoyu0525-design/fashion-studio
+> **fashion-studio**　© 2026 hexiaoyu0525-design　|　版本 1.6.2　|　许可 [CC BY 4.0](LICENSE)（使用须署名）
 
 把服装/服饰品牌的任务，从"企业给了什么"一路做到"最终交付什么"。四类任务：**企业企划、生图、视频、赛事**，并贯穿一条版权合规底线。
 
@@ -40,10 +39,10 @@ metadata:
 |---|---|
 | 只有灵感/主题/参考图 | 三要素（廓形/色彩/面料）→ 纹样/工艺 → 效果图 → 款式图 → 配饰版（选做）→ 摄影大片 |
 | 已有色彩/面料，缺款式 | 补廓形/款式 → 效果图 |
-| **已有效果图，没款式图** | 直接做款式图（07章节）→ 配饰版（选做）→ 摄影大片 |
-| **已有款式图，要做宣传** | 配饰版（选做）→ 摄影大片（image-editorial.md） |
+| **已有效果图，没款式图** | 直接做款式图（07 平面款式图，见 `references/fashion-illustration-spec.md`）→ 配饰版（选做）→ 摄影大片 |
+| **已有款式图，要做宣传** | 配饰版（选做）→ 摄影大片（见 `references/image-editorial.md`） |
 | **已有纯白底图（6套定稿）** | 配饰版（选做）→ 摄影大片 |
-| **已有摄影大片参考图，只换服装** | 直接走"复刻参考"流程（image-editorial.md 场景2） |
+| **已有摄影大片参考图，只换服装** | 直接走"复刻参考"流程（`references/image-editorial.md` 场景2） |
 | 已有款式图/成衣图/实物 | 直接走 `references/image-quality-sop.md` 四步管线：锁样衣→成衣→上模特→补镜头 |
 | 有图有想法、只要出片 | `references/video-film-types.md` 定类型 → `references/video-brief.md` 导演流水线 → 四段式 |
 | **有其他系列的部分内容，要接着做** | 先盘点已有什么、缺什么，从第一个缺的阶段继续 |
@@ -55,8 +54,8 @@ metadata:
 **每次任务开始，先读 `references/router.md` 的「任务分类路由表」**——按顺序判，命中即进入 `references/` 目录下对应 .md 文件（全部方法论 + assets 模板），再执行具体操作；本文件不重复完整表。速览：
 
 - 素材接入 / 从中间阶段开始：见上「怎么开工」。
-- 自动抓品牌官网/秀场素材：可选旁挂独立技能 `fashion-web-scraper`（https://github.com/hexiaoyu0525-design/fashion-web-scraper，另行安装）。
-- **纹样/面料深度设计**：可选旁挂独立技能 `pattern-texture-skill`（纹样构成、风格标签库、工艺适配、肌理分类、出图模板、版权指南）。
+- 自动抓品牌官网/秀场素材：可选旁挂独立技能 `fashion-web-scraper`（另行安装）。
+- **纹样/面料深度设计**：可选旁挂独立技能 `pattern-texture-skill`（下称 **PTS**；纹样构成、风格标签库、工艺适配、肌理分类、出图模板、版权指南）。
   - **两种联动模式**：
     - **FS 先行模式**：已完成的色彩板/面料板作为基础，PTS 在此基础上深化纹样设计
     - **PTS 先行模式**：PTS 输出的配色方案、面料肌理方案，如果更好，可反向更新 FS 的色彩板/面料板

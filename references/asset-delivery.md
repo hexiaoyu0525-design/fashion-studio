@@ -25,7 +25,8 @@
 
 ### 1. 画布自动写入（不手动建条目）
 - 调用 `image_gen`／`image_edit` 时把当前对话的有效 `canvas_workspace_id` 作为参数传入；工具成功返回后，产物已自动写入画布（通常为 `gen-v2-*` 条目、`path="/"`），这就是"画布一份"。
-- **禁止**再为该产物执行 `design-cli design-workspace +create`／`+create-batch`、`+get` 回读、`+update` 改 path、`FileBatchUpload`、下载、复制或另建 IMAGE Item——工具返回值里没有"已写入画布"的提示，容易误判为尚未落位而重复建条目，结果同一张图在画布出现两份。
+- **禁止写入类动作**：再为该产物执行 `design-cli design-workspace +create`／`+create-batch`、`+update` 改 path、`FileBatchUpload`、下载、复制或另建 IMAGE Item——工具返回值里没有"已写入画布"的提示，容易误判为尚未落位而重复建条目，结果同一张图在画布出现两份。
+- **只读核对不属禁止范围**：`+get`／`+tree`／`+ls` 只读不写、不产生任何条目，用于确认落位或排障时可以用；宿主强制要求写入后核对时，按宿主规则执行一次。
 - 判断画布中两条记录是否同一文件：比对条目 asset 的 `uri` 字段，`uri` 相同即同一份文件的两个条目。
 - 定向 `+get` 可能因索引延迟返回空 items，此时用 `+tree`／`+ls` 或创建回执确认对象是否真实存在，不要据此判定写入失败而重复提交。
 

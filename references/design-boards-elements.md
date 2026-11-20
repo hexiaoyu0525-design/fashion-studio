@@ -8,6 +8,13 @@
 
 ---
 
+## 目录
+
+- 03 ｜ 色彩板 Color Story　【语境：两者】
+- 04 ｜ 面料板 / 材料板 Fabric Board（含辅料）　【语境：两者】
+- 05 ｜ 纹样 / 印花 / 工艺花型板 Pattern · Print & Craft Board　【语境：两者，企业为主】
+- 06 ｜ 廓形趋势板 Silhouette & Trend Board　【语境：两者】
+
 ## 03 ｜ 色彩板 Color Story　【语境：两者】
 
 - **定位**：用视觉元素来表达这个系列的色彩感觉和氛围，不是列出有哪些颜色。
