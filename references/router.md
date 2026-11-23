@@ -61,6 +61,7 @@
 | **⑥ 视频** | |
 | 只要视频 · 先定影片类型 | `references/video-film-types.md` |
 | 已定类型 · 写投喂 Seedance 的四段式备料包；**导演流水线**（定类型→五问定片→视觉系统分层→风格档/导演声音→镜头表→四段式→生成锚点→声音后期→验收）；文生/图生视频生成前的导演逻辑（五问定片、出现形态、锚点链）；有参考时尚片想对标重做 | `references/video-brief.md` |
+| 开场 3 秒不知道怎么开场（说不出镜头语言、要可选方案）：12 式钩子 + 每式「起点/发生/落点」+ AI 可行性与翻车点 + 按品类速查 | `references/video-hooks.md` |
 | 参考片是短视频爆款/带货玩法，要复刻换人换产品（口播/盘点/街采/播客等） | 可选协作 `video-remix-studio`（爆款复刻六阶段导演流水线，README「可选配套」有安装与分工说明）；时尚美学/人物比例仍以本技能为准 |
 | **⑦ 文字 / 合规 / 库** | |
 | 要写文字：品牌故事、主题概念、三级随件说明、汇报发言稿、营销文案、designer statement、AI 创作说明 | `references/text-content.md` |
@@ -82,5 +83,5 @@
 - **设计与前期**：`references/design-ideation.md`（从零做设计·分寸尺·白模自举）、`references/design-language-dictionary.md`（感性词→设计变量 + 人话⇄术语对照）、`references/board-dictionaries.md`（各板附字典：色彩方向/辅料知识/纹样母题/廓形选型/配饰知识）、`references/color-theory.md`（色彩构成系统工具箱：三要素/五种对比/四种调和/八种配色法/视觉修正·肤色·季节场合/潘通 WGSN 提取）、`references/composition-garment.md`（服装款式构成工具箱：点线面人体映射/八大法则服装做法/分割线比例修正/印花定位/叠穿层次/决策流程）、`references/innovation-methods.md`（创新设计方法工具箱：思维转化四法/创新结构/立体造型手法库/面料再造决策/系列化展开/总决策流程）、`references/garment-transformation.md`（**成衣转化工具箱**：效果图阶段整体整合——视觉重心/量感平衡/疏密呼吸/完成度加减法/平面→立体预判/感性词→整体视觉特征）、`references/brand-design-languages.md`（**大牌设计语言方法论**：15 家概念→成衣转化链+完成度参考标准）、`references/school-design-methods.md`（**五所顶尖院校方法论**：CSM/帕森斯/LCF/皇艺/安特卫普教学流程与评价标尺）、`references/illustration-diagnosis.md`（**效果图问题诊断**：症状→可能原因→调整方向+60 秒自检）、`references/design-boards.md`（**入口索引 + 全局板面底座 + 先懂前期 + 板块间一致性**）、`references/design-boards-research.md`（01 调研 · 02 灵感/主题）、`references/design-boards-elements.md`（03 色彩 · 04 面料 · 05 纹样工艺 · 06 廓形）、`references/design-boards-accessory.md`（10 配饰）、`references/material-lab.md`（造料：面料再造 / AI 创意面料 / 可持续）、`assets/prompt-samples.md`（示例锚点包：已翻好术语的完整提示词模板）
 - **出图**：`references/image-quality-sop.md`（总调度·四步管线）、`references/image-garment.md`（无模特服装图）、`references/image-editorial.md`（大片 / lookbook）、`references/image-detail-fabric.md`（细节微距）、`references/fashion-illustration-spec.md`（07–09、11 图与人体比例）、`references/ai-model-muse.md`（固定 AI 模特）、`references/muse-asset-library.md`（Muse 资产库运营：归档/版本/索引/云盘）、`references/asset-delivery.md`（AI 资产交付：对话展示＋画布自动留份、不自动保存）、`references/category-guide.md`（全品类全风格）、`references/fabric-guide.md`（识料 / 面料知识）、`references/consistency-lock.md`（返工诊断）
 - **工程 / 提交**：`references/technical-production-spec.md`（12–16 白坯到 3D）、`references/portfolio-board.md`（17–21 作品集到 AI 成片）
-- **视频**：`references/video-film-types.md`（九种影片类型）、`references/video-brief.md`（导演流水线·四段式·对标拆解·声音与包装）
+- **视频**：`references/video-film-types.md`（九种影片类型）、`references/video-brief.md`（导演流水线·四段式·对标拆解·声音与包装）、`references/video-hooks.md`（开场钩子 12 式·按品类速查·AI 可行性）
 - **文字 / 合规 / 库**：`references/text-content.md`（随件说明与文案）、`references/copyright-compliance.md`（版权底线与自查报告）、`references/asset-library-schema.md`（素材库蓝图·**四级投喂权限唯一定义**）

@@ -1,13 +1,13 @@
 # fashion-studio · 时尚行业 AIGC 内容生产技能
 
 ![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)
-![Version](https://img.shields.io/badge/Version-1.6.2-blue)
+![Version](https://img.shields.io/badge/Version-1.7.0-blue)
 
 > 一套面向**服装 / 服饰品牌、设计师、教师、参赛学生**的完整方法论：把"企业给了什么"一路做到"最终交付什么"——覆盖 **企业企划、生图、视频、AIGC 赛事** 四条线，并贯穿设计全流程 **21 项交付物规范**。
 
 > 🎨 **配套技能**：`pattern-texture-skill`（纹样肌理垂直深度：构成/配色/工艺/创新转译）——两个技能可独立使用，也可协同工作。
 
-License: **CC BY 4.0**（使用须署名）· 版本 1.6.2 · 作者：hexiaoyu0525-design
+License: **CC BY 4.0**（使用须署名）· 版本 1.7.0 · 作者：hexiaoyu0525-design
 
 ---
 
@@ -192,7 +192,8 @@ fashion-studio/
 │  │  └─ portfolio-board.md       # 作品集展板/Line Sheet/吊牌洗唛/赛事提交
 │  ├─ 【视频】
 │  │  ├─ video-film-types.md     # 九种影片类型判定
-│  │  └─ video-brief.md           # 导演流水线/四段式备料/对标拆解/声音后期
+│  │  ├─ video-brief.md           # 导演流水线/四段式备料/对标拆解/声音后期
+│  │  └─ video-hooks.md           # 开场钩子 12 式/按品类速查/AI 可行性
 │  └─ 【文字 / 合规 / 库】
 │     ├─ text-content.md          # 品牌故事/概念说明/designer statement/AI 创作说明
 │     ├─ copyright-compliance.md  # 版权底线/可商用判定/风险评级/自查报告
