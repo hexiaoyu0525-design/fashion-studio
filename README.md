@@ -1,13 +1,13 @@
 # fashion-studio · 时尚行业 AIGC 内容生产技能
 
 ![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)
-![Version](https://img.shields.io/badge/Version-1.7.5-blue)
+![Version](https://img.shields.io/badge/Version-1.7.6-blue)
 
 > 一套面向**服装 / 服饰品牌、设计师、教师、参赛学生**的完整方法论：把"企业给了什么"一路做到"最终交付什么"——覆盖 **企业企划、生图、视频、AIGC 赛事** 四条线，并贯穿设计全流程的交付规范（逐项清单见 `references/delivery-checkpoints.md`）。
 
 > 🎨 **配套技能**：`pattern-texture-skill`（纹样肌理垂直深度：构成/配色/工艺/创新转译）——两个技能可独立使用，也可协同工作。
 
-License: **CC BY 4.0**（使用须署名）· 版本 1.7.5 · 作者：hexiaoyu0525-design
+License: **CC BY 4.0**（使用须署名）· 版本 1.7.6 · 作者：hexiaoyu0525-design
 
 ---
 
@@ -43,7 +43,7 @@ License: **CC BY 4.0**（使用须署名）· 版本 1.7.5 · 作者：hexiaoyu0
 ### 特点
 
 - **纯 Markdown、零代码、零专有 API**：不依赖任何平台的连接器，也不依赖本地算力。
-- **工具中立**：默认用即梦 Seedream / Seedance（作者实测），但同一套方法可迁到任何生图 / 视频平台，详见 `references/tool-adapter.md`。
+- **工具中立**：默认用即梦 **Seedream 5.5**（生图）与 **Seedance 2.5**（图生视频），作者实测；同一套方法可迁到任何生图 / 视频平台，详见 `references/tool-adapter.md`。
 - **"Agent 备料，你按生成"**：即使 Agent 没有图像工具，也能把素材、提示词、四段式备齐，你在任意平台手动粘贴生成。
 - **可移植**：无写死的本地路径、无私有链接；素材库给空 CSV，可导入 Airtable / Notion / Excel。
 
