@@ -1,13 +1,13 @@
 # fashion-studio · 时尚行业 AIGC 内容生产技能
 
 ![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)
-![Version](https://img.shields.io/badge/Version-1.7.0-blue)
+![Version](https://img.shields.io/badge/Version-1.7.4-blue)
 
-> 一套面向**服装 / 服饰品牌、设计师、教师、参赛学生**的完整方法论：把"企业给了什么"一路做到"最终交付什么"——覆盖 **企业企划、生图、视频、AIGC 赛事** 四条线，并贯穿设计全流程 **21 项交付物规范**。
+> 一套面向**服装 / 服饰品牌、设计师、教师、参赛学生**的完整方法论：把"企业给了什么"一路做到"最终交付什么"——覆盖 **企业企划、生图、视频、AIGC 赛事** 四条线，并贯穿设计全流程的交付规范（逐项清单见 `references/delivery-checkpoints.md`）。
 
 > 🎨 **配套技能**：`pattern-texture-skill`（纹样肌理垂直深度：构成/配色/工艺/创新转译）——两个技能可独立使用，也可协同工作。
 
-License: **CC BY 4.0**（使用须署名）· 版本 1.7.0 · 作者：hexiaoyu0525-design
+License: **CC BY 4.0**（使用须署名）· 版本 1.7.4 · 作者：hexiaoyu0525-design
 
 ---
 
@@ -27,9 +27,9 @@ License: **CC BY 4.0**（使用须署名）· 版本 1.7.0 · 作者：hexiaoyu0
 
 ## 这是什么
 
-`fashion-studio` 是一个 **Agent Skill（智能体技能）**：一个 `SKILL.md` + 一组 `references/` 方法论文档 + 三个 `assets/` 模板文件（项目画布、素材库 CSV、提示词示例锚点包）。任何支持 SKILL.md 的 Agent 读到它，就会按这套规范帮你做服装企划、出图、出片、打比赛。
+`fashion-studio` 是一个 **Agent Skill（智能体技能）**：一个 `SKILL.md` + 一组 `references/` 方法论文档 + 两个 `assets/` 模板文件（项目画布、素材库空 CSV）。任何支持 SKILL.md 的 Agent 读到它，就会按这套规范帮你做服装企划、出图、出片、打比赛。
 
-它是**方法论、检查清单、提示词骨架、行业标准**，不是一个连了某个平台的插件，也不包含可执行代码。
+它是**方法论、检查清单、提示词骨架、行业标准**，不是一个连了某个平台的插件；仅附一个结构自检脚本 `scripts/check-skill.py`（供维护者校验指针、孤儿、章节锚点、路径前缀、自指、元数据与版本、README 树、目录条目，不参与创作流程）。
 
 ### 四条主线
 
@@ -126,16 +126,9 @@ npx skills add hexiaoyu0525-design/fashion-studio
 - 「我只有一张参考图，帮我出效果图」
 - 「继续这个项目」（会读取项目根目录的 `00_项目画布`，从断点续做）
 
-### 示例：完整走一遍
+### 从哪一步开始都行
 
-**你说**：「帮我做一个宋韵新生主题的春夏女装系列，4 套 look」
-
-**Agent 输出**：
-1. 先反问你 3-5 个问题：目标受众、价格带、风格偏好（清雅/华丽/现代）、有没有参考图
-2. 给你三要素方案：廓形方向（A字/H型/收腰）、配色板（天青/月白/藕荷/泥金）、面料选择（棉麻/真丝/欧根纱）
-3. 给你 4 套 look 的设计思路：每套的主焦点、细节、配饰
-4. 给你出图提示词：每套 look 直接复制到即梦就能生成
-5. 如果你要参赛：还给你设计说明、AI 创作披露、提交清单
+已有灵感、部分要素、已有效果图都能接，按「已有什么就锁定什么」从第一个没验收过的阶段继续（起点对照见 `references/router.md`「任务分类路由表」）。每步问什么、输出到什么颗粒度，以 `SKILL.md` 与 `references/` 为准，本文件不复述方法论。
 
 开工可在项目文件夹放 `服装/ 模特/ 面料/ 场景/ 纹样/ 参考视频/ 灵感/` 等素材，Agent 会先做素材登记；**也可以从任意阶段中途开始**（已有灵感/部分三要素/已有效果图都能接）。
 
@@ -174,7 +167,8 @@ fashion-studio/
 │  │  ├─ design-boards-research.md   # 01 调研 · 02 灵感/主题板
 │  │  ├─ design-boards-elements.md   # 03 色彩 · 04 面料 · 05 纹样工艺 · 06 廓形板
 │  │  ├─ design-boards-accessory.md  # 10 配饰造型板
-│  │  └─ material-lab.md          # 面料再造/材料实验/AI 创意面料/可持续材料
+│  │  ├─ material-lab.md          # 面料再造/材料实验/AI 创意面料/可持续材料
+│  │  └─ prompt-samples.md        # 已翻好术语的完整提示词模板（新手/零术语直接套用）
 │  ├─ 【出图】
 │  │  ├─ image-quality-sop.md     # 生图总调度：四步管线/验收门/人体比例
 │  │  ├─ image-garment.md         # 无模特服装图（款式/平铺/挂拍/人台/技术图）
@@ -198,10 +192,11 @@ fashion-studio/
 │     ├─ text-content.md          # 品牌故事/概念说明/designer statement/AI 创作说明
 │     ├─ copyright-compliance.md  # 版权底线/可商用判定/风险评级/自查报告
 │     └─ asset-library-schema.md  # AIGC 素材库蓝图与四级投喂权限
-└─ assets/
-   ├─ project-template.md        # 可复制的项目画布
-   ├─ asset-library-template.csv # 素材库空模板
-   └─ prompt-samples.md          # 已翻好术语的完整提示词模板（新手/零术语直接套用）
+├─ assets/
+│  ├─ project-template.md        # 可复制的项目画布
+│  └─ asset-library-template.csv # 素材库空模板
+└─ scripts/
+   └─ check-skill.py             # 结构自检（指针/孤儿/行数/锚点/前缀/自指/编号/元数据/版本/树/目录）
 ```
 
 ---

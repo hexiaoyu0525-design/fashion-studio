@@ -1,10 +1,10 @@
 ---
 name: fashion-studio
-description: 时尚行业 AIGC 内容生产：企业企划、生图、视频、赛事四线全流程，从需求到交付物，含交付物规范与版权合规。用户提到服装企划、出图、出片、参赛，或聊服装设计、灵感板、色彩板、面料板、款式图、效果图、廓形、工艺、纹样、图案、lookbook、大片、宣发视频时使用；不必点名本技能。纹样走 `pattern-texture-skill`，爆款复刻走 `video-remix-studio`。
+description: 时尚行业 AIGC 内容生产：企业企划、成衣与大片、宣传视频、赛事参赛的全流程，从需求到交付物，含交付物规范与版权合规。用于服装企划、系列企划、款式图、效果图、廓形、版型、人体比例、面料板、色彩板、灵感板、lookbook、大片拍摄与布光、宣发视频、参赛投稿；不必点名本技能。爆款复刻走 `video-remix-studio`。
 license: CC-BY-4.0
 metadata:
   author: "hexiaoyu0525-design"
-  version: "1.7.0"
+  version: "1.7.4"
   license-name: "Creative Commons Attribution 4.0 International (CC BY 4.0)"
   copyright: "Copyright © 2026 hexiaoyu0525-design"
 ---
@@ -15,7 +15,7 @@ metadata:
 > - **硬约束**（不可破）：版权合规底线、交付规范（对话直接展示＋画布自动留一份、不自动保存）、人体比例统一口径、AI 与生产的边界——这些是行业基本逻辑，不是风格选择。
 > - **设计建议**（可按需调整）：工作流程、风格选择、配色方法、工艺建议——这些是经验总结，可根据你的具体需求灵活调整。
 
-> **fashion-studio**　© 2026 hexiaoyu0525-design　|　版本 1.7.0　|　许可 [CC BY 4.0](LICENSE)（使用须署名）
+> **fashion-studio**　© 2026 hexiaoyu0525-design　|　版本 1.7.4　|　许可 [CC BY 4.0](LICENSE)（使用须署名）
 
 把服装/服饰品牌的任务，从"企业给了什么"一路做到"最终交付什么"。四类任务：**企业企划、生图、视频、赛事**，并贯穿一条版权合规底线。
 
@@ -51,18 +51,33 @@ metadata:
 
 ## 任务路由
 
-**每次任务开始，先读 `references/router.md` 的「任务分类路由表」**——按顺序判，命中即进入 `references/` 目录下对应 .md 文件（全部方法论 + assets 模板），再执行具体操作；本文件不重复完整表。速览：
+下表只列最高频任务，命中直接进文件；未命中再读 `references/router.md` 的「任务分类路由表」全表与文件地图。**表里只写任务与文件，理由只在 router 表里**，改动两者要同步。
 
-- 素材接入 / 从中间阶段开始：见上「怎么开工」。
-- 自动抓品牌官网/秀场素材：可选旁挂独立技能 `fashion-web-scraper`（另行安装）。
+| 任务 | 进入 |
+|---|---|
+| 素材接入 / 从任意阶段中途开始 | 本文「怎么开工」 |
+| 从零做设计（没想法、只给参考图、灵感转译、参考分寸） | `references/design-ideation.md` |
+| 出任何服装/系列图（总调度：四步管线、验收门、人体比例口径） | `references/image-quality-sop.md` |
+| 出图 · 无模特（款式、平铺、挂拍、人台、技术款式图） | `references/image-garment.md` |
+| 出图 · 模特穿上（lookbook、服装大片、系列图） | `references/image-editorial.md` |
+| 出图 · 局部特写（细节、工艺、面料、微距） | `references/image-detail-fabric.md` |
+| 款式图 / 效果图 / Line-up / 人体比例 | `references/fashion-illustration-spec.md` |
+| 企业企划 / 季度方案 / 完整方案 | `references/enterprise-proposal.md` |
+| AIGC 赛事：选赛、读题、从零到交付 | `references/aigc-competition.md` |
+| 视频：先定类型 → 导演流水线与四段式备料 | `references/video-film-types.md` → `references/video-brief.md` |
+| 配色方法论 / 款式构成 / 效果图整体整合 | `references/color-theory.md` / `references/composition-garment.md` / `references/garment-transformation.md` |
+| 交付前总检（逐项核对） | `references/delivery-checkpoints.md` |
+
+其余入口：
+
 - **纹样/面料深度设计**：可选旁挂独立技能 `pattern-texture-skill`（下称 **PTS**；纹样构成、风格标签库、工艺适配、肌理分类、出图模板、版权指南）。
   - **两种联动模式**：
     - **FS 先行模式**：已完成的色彩板/面料板作为基础，PTS 在此基础上深化纹样设计
     - **PTS 先行模式**：PTS 输出的配色方案、面料肌理方案，如果更好，可反向更新 FS 的色彩板/面料板
   - 设计是迭代的，不是单向约束。
-- 工作模式/模板/速查/换平台/范例：`references/router.md` ① 组入口。
-- **效果图阶段整合不好**（要素拼一起太简单/不和谐）：整体造型美学与加减法查 `references/garment-transformation.md`；出图效果不理想时的常见问题查 `references/illustration-diagnosis.md`；学大牌/院校怎么做设计查 `references/brand-design-languages.md`（15 家转化链）与 `references/school-design-methods.md`（CSM/帕森斯/伦艺/皇艺/安特卫普）。
-- **交付前：建议读 `references/delivery-checkpoints.md` 过一遍总检**（21 项逐项核对）；产物命名 `季节码_系列_板名_版本_日期`，PDF 可打印、可编辑母版留存。
+- 自动抓品牌官网/秀场素材：可选旁挂独立技能 `fashion-web-scraper`（另行安装）。
+- 工作模式/模板/速查/换平台/范例、学大牌与院校方法论、效果图出图问题诊断：见 `references/router.md` 全表（`references/brand-design-languages.md`、`references/school-design-methods.md`、`references/illustration-diagnosis.md`）。
+- 产物命名 `季节码_系列_板名_版本_日期`，PDF 可打印、可编辑母版留存。
 
 ## 三档分工
 
