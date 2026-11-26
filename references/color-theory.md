@@ -1,6 +1,6 @@
 # 色彩理论与服装配色工具箱 Color Theory for Fashion
 
-> 本文件聚焦服装整体配色；纹样层面的配色方法论见 `pattern-texture-skill` 的 `references/color-pattern.md`（下称 **PTS**，本文件其余处同）。
+> 本文件聚焦服装整体配色；纹样层面的配色方法论见 `pattern-texture-skill` 的 `references/color-rules.md`（下称 **PTS**，本文件其余处同）。
 
 > **本文件内容均为设计建议（可按需调整）**：没有绝对的“高级/廉价”，也没有绝对的“对/错”——先想清楚你想要的是什么风格，再判断这些规则适不适用。一切以你的需求为准。
 

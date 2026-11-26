@@ -1,6 +1,6 @@
 # 创新设计方法论工具箱（先锋 · 概念系列 · 赛事 · 品牌差异化）
 
-> 本文件聚焦服装整体创新设计；纹样层面的 15 种创新模式见 `pattern-texture-skill` 的 `references/innovation-library.md`。
+> 本文件聚焦服装整体创新设计；纹样层面的 15 种创新模式见 `pattern-texture-skill` 的 `references/innovation-modes.md`。
 
 > **本文件内容均为设计建议（可按需调整）**：没有绝对的“高级/廉价”，也没有绝对的“对/错”——先想清楚你想要的是什么风格，再判断这些规则适不适用。一切以你的需求为准。
 
