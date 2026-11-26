@@ -1,13 +1,13 @@
 # fashion-studio · 时尚行业 AIGC 内容生产技能
 
 ![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)
-![Version](https://img.shields.io/badge/Version-1.7.8-blue)
+![Version](https://img.shields.io/badge/Version-1.7.9-blue)
 
 > 一套面向**服装 / 服饰品牌、设计师、教师、参赛学生**的完整方法论：把"企业给了什么"一路做到"最终交付什么"——覆盖 **企业企划、生图、视频、AIGC 赛事** 四条线，并贯穿设计全流程的交付规范（逐项清单见 `references/delivery-checkpoints.md`）。
 
 > 🎨 **配套技能**：`pattern-texture-skill`（纹样肌理垂直深度：构成/配色/工艺/创新转译）——两个技能可独立使用，也可协同工作。
 
-License: **CC BY 4.0**（使用须署名）· 版本 1.7.8 · 作者：hexiaoyu0525-design
+License: **CC BY 4.0**（使用须署名）· 版本 1.7.9 · 作者：hexiaoyu0525-design
 
 ---
 
@@ -44,7 +44,7 @@ License: **CC BY 4.0**（使用须署名）· 版本 1.7.8 · 作者：hexiaoyu0
 
 - **纯 Markdown、零代码、零专有 API**：不依赖任何平台的连接器，也不依赖本地算力。
 - **工具中立**：默认用即梦 **Seedream 5.5**（生图）与 **Seedance 2.5**（图生视频），作者实测；同一套方法可迁到任何生图 / 视频平台，详见 `references/tool-adapter.md`。
-- **"Agent 备料，你按生成"**：即使 Agent 没有图像工具，也能把素材、提示词、四段式备齐，你在任意平台手动粘贴生成。
+- **默认我直接生成**：连接器可用时，我直接调 `image_gen`／`image_edit` 出图、`image_to_video`／`text_to_video` 出片；只有所在 Agent 没有图像工具时，才降级为"我备料写词、你在平台按下"。
 - **可移植**：无写死的本地路径、无私有链接；素材库给空 CSV，可导入 Airtable / Notion / Excel。
 
 ---
@@ -203,7 +203,7 @@ fashion-studio/
 
 ## 生成平台与适配
 
-- **默认**：生图用即梦 **Seedream 5.5**（当前最新统一版本；大片/高定/campaign 等成品档默认 5.5；5.5 不可用时降级 5.0 Pro / 5.0 Flash；文生图/图生图/多图参考），视频用即梦 **Seedance 2.5**（统一默认；**备选档 2.5 flash**，同代同档 4–30s；2.0 系列不作备选；全能参考/首尾帧）。
+- **默认**：生图用即梦 **Seedream 5.5**（当前最新统一版本；大片/高定/campaign 等成品档默认 5.5；5.5 不可用时降级 5.0 Pro / 5.0 Flash；文生图/图生图/多图参考）。视频用即梦 **Seedance 2.5**（统一默认，入口「全能参考」「首尾帧」；备选档 **2.5 flash**，同代同档 4–30s；**2.0 系列作快速预览档**，只验运镜/造型/构图、不成片）。
 - **可换**：可灵 / Runway / Pika / MiniMax H3 / Sora / Veo 等视频，或 Midjourney / Flux / Stable Diffusion / 其他出图。能力清单、术语映射、降级做法、跨 Agent 说明见 **`references/tool-adapter.md`**。
 - 各文件里标注的"参考图上限、时长、有无负向字段"等是**默认平台口径**，换平台以官方为准；设计流程、锚点、比例、国标等**方法常数不变**。
 

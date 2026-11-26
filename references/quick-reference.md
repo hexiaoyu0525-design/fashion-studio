@@ -18,7 +18,7 @@
 - Tech Pack · 公差 · 针距（`technical-production-spec.md` 14/15）
 - 号型 · 推档（`technical-production-spec.md` 15，GB/T 1335）
 - 3D 虚拟成衣（`technical-production-spec.md` 16）
-- 视频（`video-brief.md` / `portfolio-board.md` 21）
+- 生图与视频（`image-quality-sop.md` / `video-brief.md` / `portfolio-board.md` 21）
 - 电商/成片（`portfolio-board.md` 21）
 - 强制/推荐标准（落地前查现行有效版，`portfolio-board.md` 19）
 - 素材投喂权限（`asset-library-schema.md`）
@@ -118,9 +118,10 @@
 - `.zprj ≤500MB`、Style3D `.sproj ≤300MB`；视频 **16:9 · MP4 · 30fps · ≤60s**；DRESSX 类 GLB **≤10MB**、贴图 ≤2048²、渲染 1440×1920。
 - **3D 不能跳过 2D 纸样**；AI 出概念图/贴图/修图与**超真实 3D 渲染图（看效果）**，缝合仿真必须 CLO/Style3D。
 
-## 视频（`video-brief.md` / `portfolio-board.md` 21）
+## 生图与视频（`image-quality-sop.md` / `video-brief.md` / `portfolio-board.md` 21）
 
-- Seedance 2.5：**4–30s**（默认；备选档 2.5 flash 同为 4–30s）；1080p MP4/MOV；走秀/360/Lookbook 单镜 5–10s 最稳；**无负向字段**。
+- 生图：默认 **Seedream 5.5**（参考图约 10–14 张），降级 **5.0 Pro / 5.0 Flash**；入口文生图/图生图/多图参考。档位与图像参数详见 `tool-adapter.md` 第二节、第七节。
+- 视频：默认 **Seedance 2.5**（4–30s），备选 **2.5 flash**（同档）；预览用 2.0 系列（4–15s，只验效果、不成片）；1080p MP4/MOV；走秀/360/Lookbook 单镜 5–10s 最稳；无负向字段。档位与实测下限详见 `tool-adapter.md` 第七节。
 - 节奏密度【经验值】：15s **4–6 镜** / 30s **8–12 镜** / 60s **14–20 镜**；高定/时装电影取上限（更少更长）、campaign/社媒取下限。
 - 转场 AI 适用性：硬切 ✅、叠化 ✅（0.3–0.8s）、划像/甩镜/匹配剪辑 ◐ 可后期补、动画转场 ✗ 后期做。
 
