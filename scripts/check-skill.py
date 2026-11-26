@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """技能结构自检（fashion-studio 与 pattern-texture-skill 共用同一份）。
 
-五项检查：
+结构检查（逐项如下）：
 1. 指针缺失：文中出现的 `xxx.md` 若指向本技能 references/ 下的文件却不存在 → FAIL；
    若该行明确写了本技能名或 references/ 前缀、或文件名不像外部技能的文件 → 也按缺失计。
    纯外部技能文件名（如 fashion-studio 的 tool-adapter.md）只报 WARN 供人核对。
@@ -12,6 +12,8 @@
    支持区间写法（第 2.2–2.5 节 = 两端都要有）。
 5. 标题编号重复：同一文件里同一编号出现两次（拆分/合并残留）→ WARN。
 6. 路径前缀：`assets/xxx` 与 `references/xxx` 必须落在对应目录（双向）→ FAIL。
+6c. 跨技能引用：一行里提到别的技能（或写了 `references/xxx` 且提到兄弟技能），
+    但兄弟技能里并没有这个同名文件 → WARN（拆/改名后留下的悬空引用）。
 7. 自指锚点：`本文第 12 节` / `§六` / 不带文件名的 `第 5 节`，本文必须有该编号标题 → FAIL。
    [4] 只管「文件名紧跟节号」，本项管同一句话里文件名离得远、或干脆没写文件名的自指。
 8. frontmatter：`name` 必须等于技能目录名；缺 `description` → FAIL；description 超过 450 字 → WARN。
@@ -235,6 +237,7 @@ def main():
         anchors[name] = collect(paths[0], root)
 
     missing, external, cited, anchor_broken, dup_head = [], [], set(), [], []
+    ext_unverified = []
     warn = []
 
     for path in md_files:
@@ -256,10 +259,13 @@ def main():
                 if name in siblings:
                     external.append(f"{rel}:{lineno} {name}（兄弟技能文件）")
                     continue
-                # 同一行点了别的技能，按外部文件处理
+                # 同一行点了别的技能：兄弟技能确有同名文件才算外部引用，否则记为待核
                 if any(h in line for h in ("fashion-studio", "video-remix-studio",
                                            "fashion-web-scraper", "pattern-texture-skill", "PTS")):
-                    external.append(f"{rel}:{lineno} {name}（外部技能文件）")
+                    if name in siblings:
+                        external.append(f"{rel}:{lineno} {name}（外部技能文件）")
+                    else:
+                        ext_unverified.append(f"{rel}:{lineno} {name}（提到外部技能，但兄弟技能里无此文件）")
                 else:
                     missing.append(f"{rel}:{lineno} 引用了不存在的文件 {name}")
             # 2. 锚点
@@ -378,6 +384,8 @@ def main():
                     prefix_bad.append(f"{rel}:{lineno} {m.group(0)}（文件在 assets/，前缀写成 references/）")
                 elif any(h in line for h in SIBLING_HINT):
                     prefix_ext.append(f"{rel}:{lineno} {m.group(0)}（兄弟技能文件）")
+                    if name not in siblings:
+                        ext_unverified.append(f"{rel}:{lineno} {m.group(0)}（提到外部技能，但兄弟技能里无此文件）")
                 else:
                     prefix_bad.append(f"{rel}:{lineno} {m.group(0)}（该目录下没有这个文件）")
 
@@ -448,6 +456,24 @@ def main():
     print(f"[12] 目录条目过期：{len(toc_bad)}")
     for t in toc_bad:
         print("    TOC", t)
+
+    # 同一行的 "name" 与 "references/name" 会重复命中，按 (文件, 行号, 文件名) 去重
+    dedup, seen = [], set()
+    for e in ext_unverified:
+        m = re.match(r'(.+?):(\d+) (\S+?)（', e)
+        key = (m.group(1), m.group(2), re.sub(r'^(references|assets)/', '', m.group(3))) if m else e
+        if key in seen:
+            continue
+        seen.add(key)
+        dedup.append(e)
+    ext_unverified = dedup
+
+    if ext_unverified:
+        print(f"[6c] 跨技能引用未验证（WARN）：{len(ext_unverified)}")
+        for e in ext_unverified[:10]:
+            print("    EXT?", e)
+        if len(ext_unverified) > 10:
+            print(f"    … 其余 {len(ext_unverified)-10} 条略")
 
     if external:
         print(f"[附] 外部文件引用（人工核对）：{len(external)}")
